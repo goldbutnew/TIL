@@ -66,7 +66,7 @@ router.beforeEach((to, from) => {
     ```
     
 2. HomeView에서 UserView로 이동 후 각 인자의 값 출력 확인하기
-  
+    <img src="https://github.com/goldbutnew/TIL/assets/149566915/0a8cd409-71a2-46e7-9d74-c8679c0aa638">
     - `to`: 이동할 URL인 user 라우트에 대한 정보가 들어있음
     - `from`: 현재 URL인 home 라우트에 대한 정보가 들어있음
 
