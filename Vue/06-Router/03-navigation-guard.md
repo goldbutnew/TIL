@@ -207,8 +207,8 @@ router.beforeEach((to, from) => {
     <!-- UserView.vue -->
     
     <script>
-    	import { onBeforRouteLeave } from 'vue-router'
-    
+      import { onBeforRouteLeave } from 'vue-router'
+      ㄴ
       onBeforeRouteLeave((to, from) => {
         const answer = window.confirm('정말 떠나실 건가요?')
         if (answer === false) {
@@ -225,28 +225,28 @@ router.beforeEach((to, from) => {
     
     ```html
     <!-- UserView.vue -->
-    
+
     <template>
       <div>
-    		<!-- 100번의 User 페이지라고 정상 출력 -->
-    		<h2>{{ $route.params.id }}번의 User 페이지</h2> 
-    		<!-- userId 변화 없음 -->
+        <!-- 100번의 User 페이지라고 정상 출력 -->
+        <h2>{{ $route.params.id }}번의 User 페이지</h2> 
+        <!-- userId 변화 없음 -->
         <h2>{{ userId }}번의 User 페이지</h2>
         <button @click="goAnotherUser">100번 유저 페이지로!</button>
       </div>
     </template>
     
     <script>
-    	import { onBeforRouteLeave, onBeforeRouteUpdate } from 'vue-router'
-    	
-    	const userId  = ref(route.params.id)
+      import { onBeforRouteLeave, onBeforeRouteUpdate } from 'vue-router'
+      
+      const userId  = ref(route.params.id)
     
-    	// const로 선언한 userId가 업데이트 되지 않는 문제 발생
-    	const goAnotherUser = function () {
+      // const로 선언한 userId가 업데이트 되지 않는 문제 발생
+      const goAnotherUser = function () {
         router.push({ name: 'user', params: {id: 100} })
       }
-     
-    	// 해결
+      
+      // 해결
       onBeforeRouteUpdate((to, from) => {
         userId.value = to.params.id
       })

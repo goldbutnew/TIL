@@ -35,12 +35,12 @@
     <template>
       <header>
         <nav>
-          **<RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>**
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
         </nav>
       </header>
     
-      **<RouterView />**
+      <RouterView />
     </template>
     ```
     
@@ -173,9 +173,9 @@ const router = createRouter({
     </template>
     
     <script>
-    	import { ref } from 'vue'
+      import { ref } from 'vue'
       import { useRoute } from 'vue-router';
-      
+
       const route = useRoute()
       const userId  = ref(route.params.id)
     </script>
@@ -204,10 +204,10 @@ const router = createRouter({
     <!-- UserView.vue -->
     
     <script>
-    	import { useRoute, useRouter } from 'vue-router';
-     
+      import { useRoute, useRouter } from 'vue-router';
+
       const router = useRouter()
-    
+
       const goHome = function () {
         router.push({ name: 'home' })
       }
