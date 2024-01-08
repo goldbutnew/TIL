@@ -1,9 +1,16 @@
 # Basic Syntax
 231024
 
+1. 변수
+2. 데이터 타입
+3. 연산자
+4. 조건문
+5. 반복문
+6. 참고
+
 <br>
 
-# 변수
+# 1. 변수
 
 ### 식별자(변수명) 작성 규칙
 
@@ -93,30 +100,18 @@
 
 <br>
 
-# 데이터 타입
+# 2. 데이터 타입
 
-<aside>
-📎 **원시 자료형**
+### 원시 자료형
 
 - primitive type
 - `Number`, `StringBooleanundefinednull`
 - 변수에 값이 직접 저장되는 자료형
     - 불변
     - 값이 복사
-</aside>
 
-<aside>
-📎 **참조 자료형**
-
-- Reference type
-- `Objects` (Object, Array, Function)
-- 객체의 주소가 저장되는 자료형
-    - 가변
-    - 주소가 복사
-</aside>
 
 ### 원시 자료형 예시
-
 - 변수에 할당될 때 값이 복사됨
 - 변수간에 서로 영향을 미치지 않음
 
@@ -135,6 +130,13 @@ b = 20
 console.log(a) // 10
 console.log(b) // 20
 ```
+
+### 참조 자료형
+- Reference type
+- `Objects` (Object, Array, Function)
+- 객체의 주소가 저장되는 자료형
+    - 가변
+    - 주소가 복사
 
 ### 참조 자료형 예시
 
@@ -230,7 +232,7 @@ console.log(b) // undefined
 
 <br>
 
-# 연산자
+# 3. 연산자
 
 ### 할당 연산자
 
@@ -345,7 +347,7 @@ false || false // false
 
 <br>
 
-# 조건문
+# 4. 조건문
 
 ### if
 
@@ -387,7 +389,7 @@ const func2 = function (person) {
 
 <br>
 
-# 반복문
+# 5. 반복문
 
 ### while
 
@@ -534,7 +536,7 @@ const func2 = function (person) {
 
 <br>
 
-# 참고
+# 6. 참고
 
 ### var
 - 재할당&재선언 가능
