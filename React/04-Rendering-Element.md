@@ -10,7 +10,7 @@
 
 - React Element는 DOM Element의 가상 표현
     
-    ![Untitled](Rendering%20Element%20fd01a9af78294303ac311a41940f4bdb/Untitled.png)
+    ![Untitled](https://github.com/goldbutnew/TIL/assets/149566915/d2e65390-edf6-4037-aec0-43be64c53f1e)
     
 - React Elements는 자바스크립트 객체 형태로 존재
 - 마음대로 변경할 수 없는 불변성을 가지고 있음
