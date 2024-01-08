@@ -20,22 +20,22 @@ const element = <h1>Hello, wordl!</h1>
 
 ```jsx
 React.createElement(
-		type,
-		[props],
-		[...children]
+  type,
+  [props],
+  [...children]
 )
 ```
 
 ```jsx
 class Hello extends React.Component {
-		render() {
-				return <div>Hello {this.props.toWhat}</div>
-		}
+  render() {
+    return <div>Hello {this.props.toWhat}</div>
+  }
 }
 
 ReactDOM.render(
-		<Hello toWhat='World' />
-		document.getElementById('root')
+	<Hello toWhat='World' />
+	document.getElementById('root')
 )
 ```
 
@@ -43,55 +43,54 @@ ReactDOM.render(
 
 ```jsx
 class Hello extends React.Component {
-		render() {
-				return **React.createElement('div', null, `Hello ${this.props.toWhat}`);**
-		}
+  render() {
+    return React.createElement('div', null, `Hello ${this.props.toWhat}`);
+  }
 }
 
 ReactDOM.render(
-		**React.createElement(Hello, { toWhat: 'World' }, null),**
-		document.getElementbyId('root')
+  React.createElement(Hello, { toWhat: 'World' }, null),
+  document.getElementbyId('root')
 );
 ```
 
 ### JSX 사용 유무 비교
 
 ```jsx
-// JSX를 사용한 코드
 const element = (
-		<h1 className="greeting">
-				Hello, world!
-		</h1>
+  <h1 className="greeting">
+    Hello, world!
+  </h1>
 
 // JSX를 사용하지 않은 코드
 const element = React.createElement(
-		'h1',
-		{ className: 'greeting' },
-		'Hello, world!'
+  'h1',
+  { className: 'greeting' },
+  'Hello, world!'
 )
 ```
 
 - `React.createElement()`의 결과로 아래와 같은 객체가 생성됨
     
     ```jsx
-    const element = {
-    		type: 'h1',
-    		props: {
-    				className: 'greeting',
-    				children: 'Hello, world!'
-    		}
-    }
+	const element = {
+		type: 'h1',
+		props: {
+			className: 'greeting',
+			children: 'Hello, world!'
+		}
+	}
     ```
     
 
 - `createElement()` 함수의 파라미터는?
     
     ```jsx
-    React.createElement(
-    		type,
-    		[props],
-    		[..children]
-    )
+	React.createElement(
+		type,
+		[props],
+		[..children]
+	)
     ```
     
 
@@ -125,12 +124,12 @@ const element = React.createElement(
 - JS 코드를 쓰고 싶으면 중괄호{}로 묶어 주면 됨
     
     ```jsx
-    function getGreeting(user) {
-    		if (user) {
-    				return <h1>Hello, {formatName(user)}!</h1>
-    		}
-    		return <h1>Hello, Stranger.</h1>
-    }
+	function getGreeting(user) {
+		if (user) {
+			return <h1>Hello, {formatName(user)}!</h1>
+		}
+		return <h1>Hello, Stranger.</h1>
+	}
     ```
     
 - HTML 중간이 아닌 태그의 속성에 값을 넣고 싶을 때는?
@@ -146,10 +145,10 @@ const element = React.createElement(
 - 자식(children)을 정의하는 방법
     
     ```jsx
-    const element = (
-    		<div>
-    				<h1>안녕하세요</h1>
-    				<h2>열심히 리액트를 공부해 봅시다</h2>
-    		</div>
-    )
+	const element = (
+		<div>
+			<h1>안녕하세요</h1>
+			<h2>열심히 리액트를 공부해 봅시다</h2>
+		</div>
+	)
     ```
