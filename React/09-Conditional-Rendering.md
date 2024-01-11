@@ -64,7 +64,6 @@
 - 엘리먼트 변수
 - 리액트의 엘리먼트를 변수처럼 다루는 방법
 - 예제 코드
-    
     ```jsx
     function LoginControl(props) {
         const [isLoggedIn, seIsLoggedIn] = useState(false)
@@ -92,7 +91,6 @@
         );
     }
     ```
-    
     - {button} ⇒ 컴포넌트라고 했지만 실제로는 컴포넌트로부터 생성된 리액트 엘리먼트
 
 ---
@@ -111,7 +109,6 @@
 - `false && expression → false` (두 번째 조건문은 평가하지 않음)
 - 단축 평가 → 굳이 불필요한 연산은 하지 않도록 하기 위해서 사용
 - 예제 코드
-    
     ```jsx
     function Mailbox(props) {
       const unreadMessages = props.unreadMessages;
@@ -128,7 +125,6 @@
       );
     }
     ```
-    
     - `unreadMessages.length > 0`의 결과 값에 따라서 h2 태그로 둘러싸인 부분의 렌더링 결정
     - && 연산자 사용할 때 조건문 false이면 다음 표현식은 평가되지 않지만 표현식이 그대로 리턴됨
 
@@ -139,7 +135,6 @@
 - `?` 연산자를 사용 → 삼항 연산자
 - `condition ? true:false`
 - 예제 코드 (1)
-    
     ```jsx
     function UserStatus(props) {
       return (
@@ -149,9 +144,7 @@
       );
     }
     ```
-    
 - 예제 코드 (2) - 문자열이 아닌 엘리먼트를 렌더링 할 수도 있음
-    
     ```jsx
     return (
       <div>
@@ -167,10 +160,8 @@
 ---
 
 ### Component 렌더링 막기
-
 - 리액트에서 null을 리턴하면 렌더링 되지 않음!
 - 예제 코드
-    
     ```jsx
     function WarningBanner(props) {
       if (!props.warn) {
