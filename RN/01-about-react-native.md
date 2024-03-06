@@ -17,16 +17,14 @@
     - 각자 원하는 바에 맞게 만들 수 있음
 - Core Component
     - 리액트에서 기본 제공하는 Native Component
-    - 예시
-        
-        
+    - 예시      
         | WEB ANALOG | React Native UI Component |
-        | --- | --- |
-        | non-scrolling <div> | <View> |
-        | <p> | <Text> |
-        | <img> | <Image> |
-        | <div> | <ScrollView> |
-        | <input type=”text”> | <TextInput> |
+        |--- | --- |
+        | non-scrolling `<div>` | `<View>` |
+        | `<p>` | `<Text>` |
+        | `<img>` | `<Image>` |
+        | `<div>` | `<ScrollView>` |
+        | `<input type="text">` | `<TextInput>` |
 
 ### 리액트 네이티브 개발환경
 
